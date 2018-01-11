@@ -4,12 +4,14 @@ import { MalihuScrollbarModule } from 'ngx-malihu-scrollbar';
 
 import { AppComponent } from './app.component';
 import { AppHeaderComponent } from './components/app-header/app-header.component';
+import { AppNavComponent } from './components/app-nav/app-nav.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppHeaderComponent
+    AppHeaderComponent,
+    AppNavComponent
   ],
   imports: [
     BrowserModule,

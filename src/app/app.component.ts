@@ -9,6 +9,10 @@ export class AppComponent {
 
   public title = "My Application";
 
+  public navItems: {title: string, route: string, icon: string}[] = [
+    
+  ];
+
   public scrollbarOptions = {
     axis: 'yx',
     theme: 'minimal-dark',
