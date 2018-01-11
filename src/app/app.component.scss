@@ -1,0 +1,26 @@
+$header-height: 30px;
+$nav-width: 50px;
+$nav-expand-width: 150px;
+header {
+    width: 100%;
+    height: $header-height;
+    background-color: #eee;
+}
+
+div {
+    display: flex;
+    nav {
+        background-color: #333;
+        height: calc(100vh - #{$header-height});
+        width: $nav-width;
+        .expand{
+            width: $nav-expand-width;
+        }
+    }
+    main {
+        background-color: #aeee;
+        width: 100%;
+        height: calc(100vh - #{$header-height});
+        overflow: hidden;
+    }
+}
