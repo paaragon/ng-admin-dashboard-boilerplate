@@ -1,3 +1,12 @@
+Angular boilerplate generated with angular-cli.
+
+### This project includes
+
+- Angular Material
+- Angular CDK
+- Animations
+- Font awesome
+
 # NgAdminLayoutBoilerplate
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.0.
