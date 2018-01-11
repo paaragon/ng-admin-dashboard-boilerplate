@@ -7,5 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public scrollbarOptions = { axis: 'yx', theme: 'minimal-dark' };
+  public scrollbarOptions = {
+    axis: 'yx',
+    theme: 'minimal-dark',
+    scrollButtons: {
+      enable: true
+    },
+    keyboard: {
+      enable: true,
+      scrollType: "stepless"
+    },
+    documentTouchScroll: true
+  };
 }

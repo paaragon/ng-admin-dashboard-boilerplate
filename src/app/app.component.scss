@@ -4,14 +4,12 @@ $nav-expand-width: 150px;
 header {
     width: 100%;
     height: $header-height;
-    background-color: #eee;
 }
 
 div {
     display: flex;
     nav {
         position: absolute;
-        background-color: #333;
         height: calc(100vh - #{$header-height});
         width: $nav-width;
         z-index: 10;
@@ -26,6 +24,5 @@ div {
         width: calc(100vw - #{$nav-width});
         height: calc(100vh - #{$header-height});
         overflow: hidden;
-        background-color: #aeee;
     }
 }
