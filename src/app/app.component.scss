@@ -12,7 +12,10 @@ div {
         position: absolute;
         height: calc(100vh - #{$header-height});
         width: $nav-width;
+        overflow: hidden;
         z-index: 10;
+        animation-name: openNavAnimation;
+        animation-duration: 4s;
         &.expand {
             width: $nav-expand-width;
         }
@@ -24,5 +27,14 @@ div {
         width: calc(100vw - #{$nav-width});
         height: calc(100vh - #{$header-height});
         overflow: hidden;
+    }
+}
+
+@keyframes openNavAnimation {
+    from {
+        width: 0;
+    }
+    to {
+        width: $nav-width;
     }
 }
