@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  public title = "My Application";
+
   public scrollbarOptions = {
     axis: 'yx',
     theme: 'minimal-dark',
