@@ -13,7 +13,7 @@ export class AppComponent {
     {
       title: 'inicio',
       route: 'inicio',
-      icon: '<i class="fa fa-tachometer" aria-hidden="true"></i>'
+      icon: '<i class="material-icons">dashboard</i>'
     }
   ];
 
