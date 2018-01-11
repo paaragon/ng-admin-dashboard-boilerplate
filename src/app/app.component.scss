@@ -1,40 +1,29 @@
-$header-height: 30px;
-$nav-width: 50px;
-$nav-expand-width: 150px;
-header {
-    width: 100%;
-    height: $header-height;
-}
+@import "../_variables";
 
-div {
+:host{
     display: flex;
     nav {
         position: absolute;
-        height: calc(100vh - #{$header-height});
+        height: 100vh;
         width: $nav-width;
         overflow: hidden;
         z-index: 10;
-        animation-name: openNavAnimation;
-        animation-duration: 4s;
         &.expand {
             width: $nav-expand-width;
         }
     }
-    main {
+    div {
         position: absolute;
-        top: $header-height;
         left: $nav-width;
         width: calc(100vw - #{$nav-width});
-        height: calc(100vh - #{$header-height});
-        overflow: hidden;
-    }
-}
-
-@keyframes openNavAnimation {
-    from {
-        width: 0;
-    }
-    to {
-        width: $nav-width;
+        header {
+            width: 100%;
+            height: $header-height;
+        }
+        main {
+            width: 100%;
+            height: calc(100vh - #{$header-height});
+            overflow: hidden;
+        }
     }
 }

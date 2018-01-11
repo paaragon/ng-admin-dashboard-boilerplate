@@ -1,0 +1,38 @@
+@import "../../../_variables";
+:host {
+    display: block;
+    background-color: $myColorDark;
+    color: $myTextOnDark;
+    height: 100%;
+    width: 100%;
+    ul {
+        padding: 0;
+        list-style: none;
+        > li {
+            display: flex;
+            flex: auto;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 1.2rem;
+            height: 64px;
+            cursor: pointer;
+            &:hover{
+                background-color: $myColorBase;
+                color: #fff;
+            }
+            > div {
+                &.icon {
+                    font-size: 3rem;
+                    ::ng-deep i {
+                        display: block;
+                        width: $nav-width;
+                        text-align: center;
+                    }
+                }
+                &.link {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+}

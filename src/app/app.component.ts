@@ -10,7 +10,11 @@ export class AppComponent {
   public title = "My Application";
 
   public navItems: {title: string, route: string, icon: string}[] = [
-    
+    {
+      title: 'inicio',
+      route: 'inicio',
+      icon: '<i class="fa fa-tachometer" aria-hidden="true"></i>'
+    }
   ];
 
   public scrollbarOptions = {
