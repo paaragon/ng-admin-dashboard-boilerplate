@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   yAxisLabel = 'Y Axis';
 
   colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    domain: ['#acdcf2', '#84cbec', '#5cbae6', '#27a3dd', '#1b7ead', '#15658a']
   };
 
   // pie
