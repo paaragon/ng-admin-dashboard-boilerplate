@@ -1,10 +1,11 @@
 <ul>
-  <li>
+  <li (click)="expandChange()">
     <div class="icon">
-      <i class="material-icons">menu</i>
+      <i class="material-icons" *ngIf="!expanded">menu</i>
+      <i class="material-icons" *ngIf="expanded">close</i>
     </div>
   </li>
-  <li *ngFor="let item of items">
+  <li *ngFor="let item of items" routerLink="{{item.route}}" routerLinkActive="active">
     <div [innerHTML]="item.icon" class="icon"></div>
     <div class="link">{{item.title}}</div>
   </li>

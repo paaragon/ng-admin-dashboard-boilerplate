@@ -8,7 +8,7 @@
     ul {
         padding: 0;
         list-style: none;
-        > li {
+        >li {
             display: flex;
             flex: auto;
             align-items: center;
@@ -16,21 +16,24 @@
             font-size: 1.2rem;
             height: 64px;
             cursor: pointer;
-            &:hover{
+            &.active {
                 background-color: $myColorBase;
                 color: #fff;
             }
-            > div {
+            &:hover {
+                color: #fff;
+            }
+            >div {
                 &.icon {
                     font-size: 3rem;
-                    ::ng-deep i {
+                     ::ng-deep i {
                         display: block;
                         width: $nav-width;
                         text-align: center;
                     }
                 }
                 &.link {
-                    font-size: 1.7rem;
+                    font-size: 1rem;
                 }
             }
         }

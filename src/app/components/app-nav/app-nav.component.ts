@@ -7,12 +7,19 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class AppNavComponent implements OnInit {
 
-  @Input() items: {title: string, route: string, icon: string}[];
-  @Output() expand: EventEmitter<boolean>;
+  @Input() items: { title: string, route: string, icon: string }[];
+  @Output() expand: EventEmitter<boolean> = new EventEmitter();
+
+  expanded: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  expandChange() {
+    this.expanded = !this.expanded;
+    this.expand.emit(this.expanded);
   }
 
 }

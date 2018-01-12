@@ -12,7 +12,7 @@ export class AppComponent {
   public navItems: {title: string, route: string, icon: string}[] = [
     {
       title: 'inicio',
-      route: 'inicio',
+      route: '/home',
       icon: '<i class="material-icons">dashboard</i>'
     }
   ];
@@ -29,4 +29,10 @@ export class AppComponent {
     },
     documentTouchScroll: true
   };
+
+  public navExpanded: boolean = false;
+
+  expandChange(expanded){
+    this.navExpanded = expanded;
+  }
 }

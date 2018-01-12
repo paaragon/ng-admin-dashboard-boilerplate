@@ -1,5 +1,5 @@
-<nav>
-  <app-nav [items]="navItems"></app-nav>
+<nav [ngClass]="{'expand': navExpanded}">
+  <app-nav [items]="navItems" (expand)="expandChange($event)"></app-nav>
 </nav>
 <div>
   <header>
