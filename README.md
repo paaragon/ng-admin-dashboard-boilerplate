@@ -9,7 +9,7 @@ It includes:
 - [angular2-perfect-scrollbar](https://www.npmjs.com/package/angular2-perfect-scrollbar): an Angular 2 wrapper library for Perfect Scrollbar. It controls the scroll in the main section of the page.
 - [ngx-charts](https://github.com/swimlane/ngx-charts): Declarative Charting Framework for Angular2 and beyond.
 
-![screenshot](http://url/to/img.png)
+![screenshot](https://raw.githubusercontent.com/paaragon/ng-admin-dashboard-boilerplate/master/readme_assets/screenshot.PNG)
 
 # Angular CLI README
 
