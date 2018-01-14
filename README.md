@@ -1,4 +1,15 @@
-# NgAdminLayoutBoilerplate
+# Ng Admin Dashboard Boilerplate
+
+This project is a template of anadministration dashboard.
+
+It includes:
+
+- [Angular CLI](https://cli.angular.io/): to generate angular scafolding and components.
+- [Angular Material](https://material.angular.io/): Material Design components for Angular.
+- [angular2-perfect-scrollbar](https://www.npmjs.com/package/angular2-perfect-scrollbar): an Angular 2 wrapper library for Perfect Scrollbar. It controls the scroll in the main section of the page.
+- [ngx-charts](https://github.com/swimlane/ngx-charts): Declarative Charting Framework for Angular2 and beyond.
+
+# Angular CLI README
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.0.
 
