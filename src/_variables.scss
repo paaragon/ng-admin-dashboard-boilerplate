@@ -1,9 +1,33 @@
-$myColorBase: #047cc0;
-$myTextOnBase: #000;
-$myColorDark: #1b2834;
-$myTextOnDark: #56acf2;
-$myColorLight: #63a4ff;
-$myTextOnLight: #777677;
+$mono1: #399CD8;
+$mono2: #0C8DDA;
+$mono3: #047CC0;
+$mono4: #035B8F;
+$mono5: #02466F;
+$mono6: #1b2834;
+
+$primary: #047cc0;
+$secondary: #050505;
+$success: #50b387;
+$info: #4bb4e6;
+$warning: #ff7900;
+$danger: #d40a18;
+$light: #63a4ff;
+$dark: #1b2834;
+
+$textLight: #56acf2;
+$textDark: #000;
+$textPrimary: $primary;
+
+$theme-colors: (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+);
 
 $header-height: 60px;
 $nav-width: 64px;

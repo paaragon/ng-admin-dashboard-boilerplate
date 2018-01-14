@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MalihuScrollbarModule } from 'ngx-malihu-scrollbar';
 
 import { AppComponent } from './app.component';
 import { AppHeaderComponent } from './components/app-header/app-header.component';
@@ -10,7 +9,13 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTableModule } from '@angular/material';
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  // suppressScrollX: true
+};
 
 @NgModule({
   declarations: [
@@ -22,12 +27,16 @@ import { MatTableModule } from '@angular/material';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MalihuScrollbarModule.forRoot(),
+    PerfectScrollbarModule,
     BrowserAnimationsModule,
-    NgxChartsModule,
-    MatTableModule
+    NgxChartsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

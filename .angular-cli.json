@@ -20,13 +20,9 @@
       "prefix": "app",
       "styles": [
         "styles.scss",
-        "../node_modules/font-awesome/css/font-awesome.min.css",
-        "../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css"
+        "../node_modules/font-awesome/css/font-awesome.min.css"
       ],
-      "scripts": [
-        "../node_modules/jquery/dist/jquery.min.js",
-        "../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"
-      ],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

@@ -1,6 +1,6 @@
-@import '../node_modules/bootstrap/scss/bootstrap';
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "_variables";
+@import '../node_modules/bootstrap/scss/bootstrap';
 body {
     background-color: #f6f6f6;
     font-size: 16px;
@@ -37,4 +37,35 @@ h5 {
 h6 {
     font-size: 12px;
     line-height: 20px;
+}
+
+
+/*
+Material styles
+*/
+
+mat-checkbox /deep/ {
+    &.mat-checkbox-checked.mat-accent .mat-checkbox-background,
+    &.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+        background-color: $primary;
+    }
+}
+
+button.mat-button {
+    background-color: $primary;
+    color: #fff;
+    outline: none;
+}
+
+mat-form-field.mat-focused /deep/ {
+    .mat-form-field-label {
+        color: $secondary;
+    }
+    .mat-form-field-ripple{
+        background-color: $secondary;
+        outline: none;
+    }
+    .mat-input-element {
+        caret-color: $secondary;
+    }
 }

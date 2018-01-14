@@ -1,6 +1,5 @@
 @import "../_variables";
-
-:host{
+:host {
     display: flex;
     nav {
         position: absolute;
@@ -8,6 +7,7 @@
         width: $nav-width;
         overflow: hidden;
         z-index: 10;
+        transition: width 0.5s;
         &.expand {
             width: $nav-expand-width;
         }
@@ -20,7 +20,7 @@
             width: 100%;
             height: $header-height;
         }
-        main {
+        perfect-scrollbar {
             width: 100%;
             height: calc(100vh - #{$header-height});
             overflow: hidden;
