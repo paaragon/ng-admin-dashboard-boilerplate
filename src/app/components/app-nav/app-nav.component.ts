@@ -1,4 +1,12 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Router,
+  Event as RouterEvent,
+  NavigationStart,
+  NavigationEnd,
+  NavigationCancel,
+  NavigationError
+} from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -11,8 +19,15 @@ export class AppNavComponent implements OnInit {
   @Output() expand: EventEmitter<boolean> = new EventEmitter();
 
   expanded: boolean = false;
+  loading: boolean = true;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) {
+    router.events.subscribe((event: RouterEvent) => {
+      this.navigationInterceptor(event)
+    })
+  }
 
   ngOnInit() {
   }
@@ -22,4 +37,19 @@ export class AppNavComponent implements OnInit {
     this.expand.emit(this.expanded);
   }
 
+  navigationInterceptor(event: RouterEvent): void {
+    if (event instanceof NavigationStart) {
+      this.loading = true
+    }
+    if (event instanceof NavigationEnd) {
+      this.loading = false
+    }
+
+    if (event instanceof NavigationCancel) {
+      this.loading = false
+    }
+    if (event instanceof NavigationError) {
+      this.loading = false
+    }
+  }
 }
