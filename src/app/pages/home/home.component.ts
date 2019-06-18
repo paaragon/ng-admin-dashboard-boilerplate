@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {DataSource} from '@angular/cdk/collections';
-import {Observable} from 'rxjs/Observable';
 import { pie } from '../../fakedata/pie';
 import { line } from '../../fakedata/line';
 import { bar } from '../../fakedata/bar';
-import 'rxjs/add/observable/of';
+
 
 @Component({
   selector: 'app-home',

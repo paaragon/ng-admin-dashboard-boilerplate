@@ -44,7 +44,7 @@ h6 {
 Material styles
 */
 
-mat-checkbox /deep/ {
+mat-checkbox ::ng-deep {
     &.mat-checkbox-checked.mat-accent .mat-checkbox-background,
     &.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
         background-color: $primary;
@@ -57,7 +57,7 @@ button.mat-button {
     outline: none;
 }
 
-mat-form-field.mat-focused /deep/ {
+mat-form-field.mat-focused ::ng-deep {
     .mat-form-field-label {
         color: $secondary;
     }

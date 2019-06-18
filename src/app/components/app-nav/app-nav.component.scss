@@ -28,7 +28,7 @@
                 &.icon {
                     display: flex;
                     font-size: 3rem;
-                    /deep/ i {
+                    ::ng-deep i {
                         display: block;
                         width: $nav-width;
                         text-align: center;
