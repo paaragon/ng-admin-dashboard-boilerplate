@@ -1,15 +1,28 @@
 <div class="container-fluid">
   <div class="row">
+    <div class="col"></div>
     <div class="col">
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h1>Iniciar sesión</h1>
+      <form>
+        <div class="form-group">
+          <label for="userinput">Usuario</label>
+          <input type="text" name="user" id="userinput" class="form-control" [ngClass]="{'is-invalid': userError}"
+            placeholder="Introduce aquí tu usuario" [(ngModel)]="user">
+          <div class="invalid-feedback">
+            El usuario debe estar relleno
+          </div>
         </div>
-      </div>
+        <div class="form-group">
+          <label for="passwordinput">Contraseña</label>
+          <input type="password" name="password" class="form-control" id="passwordinput"
+            placeholder="Introduce aquí tu contraseña" [(ngModel)]="password" [ngClass]="{'is-invalid': passwordError}">
+          <div class="invalid-feedback">
+            La contraseña debe estar rellena
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="login()">Entrar</button>
+      </form>
     </div>
+    <div class="col"></div>
   </div>
 </div>

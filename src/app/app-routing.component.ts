@@ -8,7 +8,7 @@ import { RoleGuardService } from './services/auth/role-guard.service';
 const appRoutes: Routes = [
 	{
 		path: '',
-		redirectTo: '/login',
+		redirectTo: '/home',
 		pathMatch: 'full'
 	},
 	{

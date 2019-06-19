@@ -12,11 +12,19 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { LoginComponent } from './pages/login/login.component';
-import { JwtHelperService } from '@auth0/angular-jwt';
+import { JwtHelperService, JwtModule } from '@auth0/angular-jwt';
+import { FormsModule } from '@angular/forms';
+import { AuthService } from './services/auth/auth.service';
+import { ToastComponent } from './components/toast/toast.component';
+import { ToastService } from './services/toast/toast.service';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   // suppressScrollX: true
 };
+
+export function getToken(): string {
+  return localStorage.getItem('token');
+}
 
 @NgModule({
   declarations: [
@@ -24,7 +32,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AppHeaderComponent,
     AppNavComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    ToastComponent
   ],
   imports: [
     BrowserModule,
@@ -32,13 +41,21 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PerfectScrollbarModule,
     BrowserAnimationsModule,
     NgxChartsModule,
+    FormsModule,
+    JwtModule.forRoot({
+      config: {
+          tokenGetter: getToken
+      }
+  })
   ],
   providers: [
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
     },
-    JwtHelperService
+    JwtHelperService,
+    AuthService,
+    ToastService
   ],
   bootstrap: [AppComponent]
 })
