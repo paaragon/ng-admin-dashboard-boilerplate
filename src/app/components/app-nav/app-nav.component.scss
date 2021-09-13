@@ -8,7 +8,7 @@
     ul {
         padding: 0;
         list-style: none;
-        >li {
+        > li {
             outline: none;
             display: flex;
             flex: auto;
@@ -24,7 +24,7 @@
             &:hover {
                 color: #fff;
             }
-            >div {
+            > div {
                 &.icon {
                     display: flex;
                     font-size: 3rem;
@@ -63,7 +63,7 @@ $duration: 1.4s;
     stroke-dasharray: $offset;
     stroke-dashoffset: 0;
     transform-origin: center;
-    animation: dash $duration ease-in-out infinite, colors ($duration*4) ease-in-out infinite;
+    animation: dash $duration ease-in-out infinite, colors ($duration * 4) ease-in-out infinite;
 }
 
 @keyframes colors {
@@ -89,7 +89,7 @@ $duration: 1.4s;
         stroke-dashoffset: $offset;
     }
     50% {
-        stroke-dashoffset: $offset/4;
+        stroke-dashoffset: $offset * 0.25;
         transform: rotate(135deg);
     }
     100% {
